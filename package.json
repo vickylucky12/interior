@@ -1,0 +1,33 @@
+{
+  "name": "bn_interior",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formspree/react": "^2.4.0",
+    "@portabletext/react": "^1.0.6",
+    "@sanity/image-url": "^1.0.1",
+    "next": "12.1.6",
+    "next-sanity": "^0.8.4",
+    "party-js": "^2.1.2",
+    "react": "18.1.0",
+    "react-awesome-shapes": "^0.1.12",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.4.0",
+    "swiper": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.35",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "sass": "^1.52.2",
+    "typescript": "4.7.2"
+  }
+}

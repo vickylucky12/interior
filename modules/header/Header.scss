@@ -1,0 +1,34 @@
+.header {
+  background-color: $brand_color_secondary;
+  color: $brand_color_primary;
+  height: 80px;
+  .wrapper {
+    height: 100%;
+    // @include displayCenter(center, space-evenly);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .header_left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .nav_item {
+        margin-left: 20px;
+      }
+    }
+    .header_middle {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .header_right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .nav_item {
+        margin-right: 20px;
+      }
+    }
+  }
+}

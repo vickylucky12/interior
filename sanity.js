@@ -1,0 +1,13 @@
+import {createClient, createCurrentUserHook} from 'next-sanity'
+import createImageUrlBuilder from '@sanity/image-url'
+const config = {
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  apiVersion: '2022-03-25', // Learn more: https://www.sanity.io/docs/api-versioning
+  useCdn: process.env.NODE_ENV === 'production' || false,
+  // token: '<sanity access token>',
+}
+
+export const sanityClient = createClient(config)
+export const urlFor = (source) => createImageUrlBuilder(config).image(source)
+export const useCurrentUser = createCurrentUserHook(config)

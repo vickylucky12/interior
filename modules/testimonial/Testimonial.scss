@@ -1,0 +1,36 @@
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 60px 20px;
+
+  .testimonial_left {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    @include mQ($sm) {
+      width: 380px;
+      // width: 100%;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: $brand_color_primary;
+      border: 1px solid $brand_color_primary;
+    }
+    h1 {
+      color: $brand_color_primary;
+      font-size: bold;
+    }
+  }
+  .testimonial_right {
+    margin-top: 80px;
+  }
+}
