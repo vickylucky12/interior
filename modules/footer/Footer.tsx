@@ -1,11 +1,32 @@
-import React, {useEffect, useId} from 'react'
+import React, {useEffect, useId, useState} from 'react'
 import {FaFacebookF, FaLinkedinIn} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import {BsInstagram} from 'react-icons/bs'
+import {sanityClient} from '../../sanity'
 
-const Footer = ({socialLinks}: any) => {
+const Footer = () => {
+  const [socialLinks, setSocialLinks] = useState<any>({
+    socialLinks: {},
+    webInfo: {},
+  })
   const {faceBookURL, instagramURL, linkedInURL, twitterURL} =
     socialLinks && socialLinks?.socialLinks
+
+  const getHeaderInfo = async () => {
+    try {
+      const pageInfoQuery = `*[_type == "basicInfo"]`
+      const pageInfo = await sanityClient.fetch(pageInfoQuery)
+      const {webInfo, contact} = pageInfo[0]
+      const info = {
+        webInfo,
+        socialLinks: contact,
+      }
+      setSocialLinks(info)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  getHeaderInfo()
 
   const socialArray = [
     {

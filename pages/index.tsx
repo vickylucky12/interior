@@ -9,9 +9,10 @@ import ProjectsShowcase from '../modules/projectsShowcase/ProjectsShowcase'
 import About from '../modules/about/About'
 import {sanityClient} from '../sanity'
 import {useEffect} from 'react'
+import HeaderMeta from '../shared/HeaderMeta'
 
 const Index: NextPage = (props: any) => {
-  const {services, pageInfo, gallery, setWebInfo} = props
+  const {services, pageInfo, gallery} = props
   const {
     about,
     contact,
@@ -19,17 +20,11 @@ const Index: NextPage = (props: any) => {
     viewPort,
     testimonials,
     serviceDescription,
-    webInfo,
   } = pageInfo[0]
-  useEffect(() => {
-    const info = {
-      headerInfo: webInfo,
-      socialLinks: contact,
-    }
-    setWebInfo(info)
-  }, [contact])
+
   return (
     <>
+      <HeaderMeta pageTitle='Home | BN Square Architects' />
       <Hero data={banner} />
       <Showcase data={viewPort} />
       <Services data={services} title={serviceDescription} />
@@ -58,6 +53,5 @@ export async function getStaticProps() {
       services,
       gallery,
     },
-    revalidate: 60,
   }
 }

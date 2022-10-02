@@ -1,34 +1,68 @@
 .header {
   background-color: $brand_color_secondary;
   color: $brand_color_primary;
-  height: 80px;
+  height: 10vh;
   .wrapper {
     height: 100%;
-    // @include displayCenter(center, space-evenly);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    .header_left {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .nav_item {
-        margin-left: 20px;
+    @include displayCenter(center, space-between);
+    flex-wrap: wrap;
+    &_left {
+      position: relative;
+      width: 200px;
+      height: 80%;
+      height: 80%;
+      border-radius: 2px !important;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: $box_shadow_one;
+      margin-top: 10px;
+    }
+    &_right {
+      @include displayCenter(center, space-evenly);
+      p {
+        padding: 0 25px;
+        cursor: pointer;
+        font-weight: 600;
       }
     }
-    .header_middle {
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      justify-content: center;
-    }
-    .header_right {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .nav_item {
-        margin-right: 20px;
+    .menu_icon {
+      display: none !important;
+      cursor: pointer;
+      svg {
+        font-size: 30px;
       }
     }
+    @include mQ($md) {
+      position: relative;
+      .menu_icon {
+        display: block !important;
+      }
+      &_left {
+        width: 100px;
+        height: 50%;
+        margin-top: 0;
+        box-shadow: none;
+      }
+      &_right {
+        background-color: $brand_color_secondary;
+        position: absolute;
+        display: none;
+        top: 10vh;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        p {
+          padding: 10px;
+          text-align: right;
+        }
+      }
+    }
+    .menu_icon {
+      display: block;
+    }
+  }
+  @include mQ($md){
+    box-shadow: $box_shadow_one;
   }
 }

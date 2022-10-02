@@ -4,15 +4,14 @@ import Header from '../../modules/header/Header'
 
 interface I_Layout {
   children: React.ReactNode
-  webInfo: any
 }
 
-const Layout = ({children, webInfo}: I_Layout) => {
+const Layout = ({children}: I_Layout) => {
   return (
     <>
-      <Header headerInfo={webInfo?.headerInfo} />
+      <Header />
       {children}
-      <Footer socialLinks={webInfo} />
+      <Footer/>
     </>
   )
 }
