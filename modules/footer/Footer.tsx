@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
           <div className='footer_bottom'>
             @copyright {new Date().getFullYear()}{' '}
-            {socialLinks?.headerInfo?.websiteName} - All Rights Received
+            {socialLinks?.webInfo?.websiteName} - All Rights Received
           </div>
         </div>
       </div>

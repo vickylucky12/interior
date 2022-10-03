@@ -20,9 +20,6 @@ const Contact = ({data}: any) => {
     {
       data: {
         subject: `${userName} trying to connect with you`,
-        pageTitle: function () {
-          return document.title
-        },
       },
     }
   )
@@ -61,7 +58,7 @@ const Contact = ({data}: any) => {
 
   return (
     <>
-      <div className='contact_container'>
+      <div className='contact_container' id='contact'>
         <div className='container'>
           <div className='contact_wrapper'>
             <div className='contact_left'>

@@ -1,0 +1,29 @@
+.showCaseProjects {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .p_card {
+      position: relative;
+      height: 350px;
+      border: 5px solid $brand_color_primary;
+      cursor: pointer;
+    }
+  }
+  .previewItem {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #040d21ce;
+    .closeIcon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      svg {
+        font-size: 25px;
+      }
+    }
+  }
+}

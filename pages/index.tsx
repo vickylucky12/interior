@@ -13,14 +13,8 @@ import HeaderMeta from '../shared/HeaderMeta'
 
 const Index: NextPage = (props: any) => {
   const {services, pageInfo, gallery} = props
-  const {
-    about,
-    contact,
-    banner,
-    viewPort,
-    testimonials,
-    serviceDescription,
-  } = pageInfo[0]
+  const {about, contact, banner, viewPort, testimonials, serviceDescription} =
+    pageInfo[0]
 
   return (
     <>
@@ -53,5 +47,6 @@ export async function getStaticProps() {
       services,
       gallery,
     },
+    revalidate: 60,
   }
 }

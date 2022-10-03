@@ -15,7 +15,7 @@ const ProjectsShowcase = ({data, services}: any) => {
   return (
     <div className='p_showcase'>
       <div className='services_heading'>
-        <h1>We Build More Projects Successfully</h1>
+        <h1 className='section_heading'>We Build More Projects Successfully</h1>
       </div>
       <div className='p_wrapper'>
         {data?.map((item: any) => (

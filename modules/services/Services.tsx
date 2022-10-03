@@ -6,7 +6,7 @@ import {useRouter} from 'next/router'
 const Services = ({data, title}: any) => {
   const router = useRouter()
   return (
-    <section className='services'>
+    <section className='services' id='services'>
       <div className='container'>
         <div className='services_heading'>
           <h1 className='section_heading '>What We Do?</h1>

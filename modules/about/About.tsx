@@ -5,7 +5,7 @@ import {urlFor} from '../../sanity'
 
 const About = ({data}: any) => {
   return (
-    <div className='about'>
+    <div className='about' id='about'>
       <div className='container'>
         <div className='services_heading'>
           <h1 className='section_heading '>About us</h1>
@@ -24,7 +24,9 @@ const About = ({data}: any) => {
             <h2>{data?.aboutHeading}</h2>
             <p>{data?.aboutDescription}</p>
             <div className='contact_btn'>
-              <button className='btn_brand_outline'>Contact us</button>
+              <Link href='/#contact' passHref>
+                <button className='btn_brand_outline'>Contact us</button>
+              </Link>
             </div>
           </div>
         </div>

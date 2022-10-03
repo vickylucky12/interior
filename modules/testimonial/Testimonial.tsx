@@ -9,7 +9,7 @@ const Testimonial = ({data}: any) => {
         <div className='icon'>
           <FaQuoteRight />
         </div>
-        <h1>What our Clients Are Saying</h1>
+        <h1 className='section_heading'>What our Clients Are Saying</h1>
       </div>
       <div className='testimonial_right'>
         <Slider data={data} />

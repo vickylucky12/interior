@@ -59,31 +59,33 @@ const Header = () => {
         <div className='wrapper'>
           <div className='wrapper_left'>
             {headerInfo?.logo && (
-              <Image
-                src={urlFor(headerInfo?.logo?.asset).url()}
-                alt={headerInfo?.websiteName}
-                layout='fill'
-                priority={true}
-              />
+              <Link href='/' passHref>
+                <Image
+                  src={urlFor(headerInfo?.logo?.asset).url()}
+                  alt={headerInfo?.websiteName}
+                  layout='fill'
+                  priority={true}
+                />
+              </Link>
             )}
           </div>
           <div ref={headerRef} className='wrapper_right'>
-            <Link href='/' passHref>
+            <Link href='/#about' scroll={false} passHref>
               <p onClick={closeNavbar} className='nav_item'>
                 About us
               </p>
             </Link>
-            <Link href='/' passHref>
+            <Link href='/#services' passHref>
               <p onClick={closeNavbar} className='nav_item'>
                 Whats We Do?
               </p>
             </Link>
-            <Link href='/' passHref>
+            <Link href='/projects' passHref>
               <p onClick={closeNavbar} className='nav_item'>
                 Projects
               </p>
             </Link>
-            <Link href='/' passHref>
+            <Link href='/#contact' passHref>
               <p onClick={closeNavbar} className='nav_item'>
                 Contact Us
               </p>

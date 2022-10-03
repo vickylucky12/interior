@@ -2654,6 +2654,13 @@
   dependencies:
     "@types/react" "^17"
 
+"@types/react-image-gallery@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-image-gallery/-/react-image-gallery-1.0.5.tgz#563234ac0fa131e2920199d191fca0c1594ba29d"
+  integrity sha512-CjIjFXmV7zGRO/FkdtPK31Rwj0ud7Xz/9e5o4DCX2Lx96jR8+0xCmKeUAQQVN3pKc6jUjOC0f/aEylhKg8vhAw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "18.0.12"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.12.tgz"
@@ -8624,6 +8631,11 @@ react-icons@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
   integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
+
+react-image-gallery@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.2.10.tgz#c12e671f902b48179b94e8b348c0f34e8bc731fe"
+  integrity sha512-AXgaHRBk7t7ORCLh/yOjJcndWSsdKYvVMkTymVq3j0BAdQWCjV+zjpqyZFviEtU87FlSdk1Sym+3WrB3U2EwVQ==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
