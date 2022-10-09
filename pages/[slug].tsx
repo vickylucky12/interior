@@ -9,7 +9,7 @@ const ServicePage = ({info}: any) => {
     <>
       <HeaderMeta
         pageTitle={`${
-          slug?.title.charAt(0).toUpperCase() + slug?.title.slice(1)
+          slug?.charAt(0).toUpperCase() + slug.slice(1)
         } | BN Square Architects}`}
       />
       <ProjectsBanner title={slug} banner={galleryImages[0]} />
