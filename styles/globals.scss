@@ -94,6 +94,11 @@ h6 {
     font-size: 22px;
     margin-left: 10px;
   }
+  @include mQ($sm) {
+    padding: 0.5rem 0.2rem;
+    width: 150px;
+    font-size: 0.8rem;
+  }
 }
 
 .btn_brand_outline {
@@ -114,6 +119,11 @@ h6 {
     background: $brand_color_secondary;
     box-shadow: $button_shadow;
   }
+  @include mQ($sm) {
+    padding: 0.5rem 0.2rem;
+    width: 150px;
+    font-size: 0.8rem;
+  }
 }
 
 .heading {
@@ -121,6 +131,9 @@ h6 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 100%;
+  @include mQ($sm) {
+    font-size: 25px !important;
+  }
 }
 
 .section_heading {
@@ -128,8 +141,20 @@ h6 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 100%;
+  @include mQ($sm) {
+    font-size: 25px !important;
+    p {
+      font-size: 10px;
+    }
+  }
 }
 
-.show{
+.show {
   display: block !important;
+}
+
+@include mQ($sm) {
+  p {
+    font-size: 14px;
+  }
 }

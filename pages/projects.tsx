@@ -1,14 +1,14 @@
 import React from 'react'
 import GridLayout from '../modules/projects/GridLayout'
 import ProjectsBanner from '../modules/projects/ProjectsBanner'
-import {sanityClient} from '../sanity'
 import HeaderMeta from '../shared/HeaderMeta'
+import {sanityClient} from '../sanity'
 
 const projects = (props: any) => {
   return (
     <>
       <HeaderMeta pageTitle='Projects | BN Square Architects' />
-      <ProjectsBanner title='Our Great Projects' banner={props?.gallery[0]} />
+      <ProjectsBanner title='Great Projects' banner={props?.gallery[0]} />
       <GridLayout images={props?.gallery} />
     </>
   )
@@ -24,5 +24,6 @@ export async function getStaticProps() {
     props: {
       gallery,
     },
+    revalidate: 160000,
   }
 }

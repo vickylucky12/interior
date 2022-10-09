@@ -25,12 +25,12 @@ const Contact = ({data}: any) => {
   )
 
   useEffect(() => {
+    const confettiSound = new Audio(
+      'https://www.soundjay.com/misc/sounds/whip-whoosh-02.mp3'
+    )
     let timer: any
     timer = setTimeout(() => {
       if (!state?.submitting && state?.succeeded && !isModalOpen && trackFrom) {
-        const confettiSound = new Audio(
-          'https://www.soundjay.com/misc/sounds/whip-whoosh-02.mp3'
-        )
         confettiSound.play()
         setIsModalOpen(true)
         formRef?.current?.reset()

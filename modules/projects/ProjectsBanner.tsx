@@ -13,7 +13,9 @@ const ProjectsBanner = ({banner, title}: any) => {
         />
       </div>
       <div className='banner_content'>
-        <h1 className='section_heading'>{title}</h1>
+        <h1 className='section_heading'>
+          {title.charAt(0).toUpperCase() + title.slice(1)}
+        </h1>
       </div>
     </div>
   )

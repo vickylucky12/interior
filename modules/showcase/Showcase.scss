@@ -1,6 +1,7 @@
 .showcase {
   max-width: 900px;
   margin: 150px auto;
+  // background-color: teal;
   @include mQ($md) {
     max-width: 100%;
   }
@@ -54,10 +55,70 @@
       &:nth-child(3) {
         top: 50%;
         left: -150px;
+        @include mQ(1090px) {
+          top: 50%;
+          left: 0;
+        }
       }
       &:nth-child(4) {
         bottom: -47.5px;
         right: -100px;
+        @include mQ(1090px) {
+          bottom: -47.5px;
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+    }
+    @include mQ($sm) {
+      max-width: 100%;
+      &_image {
+        height: 350px;
+      }
+      &_section {
+        padding: 10px;
+        height: 80px;
+        width: 230px;
+        align-items: flex-start;
+        &_left {
+          min-width: 25px;
+          min-height: 25px;
+          width: 25px;
+          height: 25px;
+          margin-right: 5px;
+          font-size: 12px;
+        }
+        &_right {
+          h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+        &:nth-child(2) {
+          top: -47.5px;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        &:nth-child(3) {
+          top: 50%;
+          left: -150px;
+          @include mQ(1090px) {
+            top: 50%;
+            left: 0;
+          }
+        }
+        &:nth-child(4) {
+          bottom: -47.5px;
+          right: -100px;
+          @include mQ(1090px) {
+            bottom: -47.5px;
+            left: 50%;
+            transform: translate(-50%);
+          }
+        }
       }
     }
   }

@@ -7,7 +7,11 @@ const ServicePage = ({info}: any) => {
   const {slug, galleryImages} = info
   return (
     <>
-      <HeaderMeta pageTitle='Projects | BN Square Architects' />
+      <HeaderMeta
+        pageTitle={`${
+          slug?.title.charAt(0).toUpperCase() + slug?.title.slice(1)
+        } | BN Square Architects}`}
+      />
       <ProjectsBanner title={slug} banner={galleryImages[0]} />
       <GridLayout images={galleryImages} />
     </>
@@ -52,5 +56,6 @@ export async function getStaticProps({params}: any) {
     props: {
       info,
     },
+    revalidate: 160000,
   }
 }

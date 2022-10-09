@@ -3,6 +3,10 @@
   height: 50vh;
   margin-top: 10px;
   position: relative;
+  @include mQ($md) {
+    text-align: center;
+    height: 30vh;
+  }
   &::after {
     position: absolute;
     width: 100%;

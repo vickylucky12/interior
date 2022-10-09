@@ -15,7 +15,7 @@ const Hero = ({data}: any) => {
             <div className='buttons_wrapper'>
               <button className='btn_brand'>Contact us</button>
               <Link href='/projects' passHref>
-                <button className='btn_brand_outline'>View our Projects</button>
+                <button className='btn_brand_outline'>View Projects</button>
               </Link>
             </div>
           </div>

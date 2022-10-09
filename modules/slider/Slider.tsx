@@ -23,7 +23,7 @@ const Slider = ({data}: any) => {
           <SwiperSlide key={item?._key}>
             <div className='image_container'>
               <div className='content_wrapper'>
-                <p>{item?.testimonialText}</p>
+                <p>{`${item?.testimonialText}`}</p>
                 <h3>{item?.personName}</h3>
               </div>
             </div>

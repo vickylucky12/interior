@@ -7,6 +7,10 @@
       height: 350px;
       border: 5px solid $brand_color_primary;
       cursor: pointer;
+      @include mQ($sm) {
+        height: 220px;
+        margin-bottom: 10px;
+      }
     }
   }
   .previewItem {
@@ -16,6 +20,8 @@
     height: 100%;
     z-index: 100;
     background-color: #040d21ce;
+    padding: 10px;
+    overflow-y: scroll;
     .closeIcon {
       position: fixed;
       top: 20px;

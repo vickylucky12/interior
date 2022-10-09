@@ -1,15 +1,10 @@
 footer {
-  // height: 100px;
   padding: 50px 0;
-  // background-image: url('/svg/waves.svg');
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-
   .footer_wrapper {
     height: 100%;
     @include displayCenter(center, center);
     flex-direction: column;
+    text-align: center;
     .footer_top {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -23,7 +18,6 @@ footer {
         margin: auto;
         background-color: $brand_color_secondary;
         border-radius: 50%;
-        // font-size: 30px;
         font-weight: bold;
         box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px,
           rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
@@ -37,7 +31,6 @@ footer {
     .footer_bottom {
       color: #ffff;
       margin-top: 30px;
-      // background-color: aqua;
     }
   }
 }
