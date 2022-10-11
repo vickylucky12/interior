@@ -24,6 +24,6 @@ export async function getStaticProps() {
     props: {
       gallery,
     },
-    revalidate: 160000,
+    revalidate: 50000,
   }
 }

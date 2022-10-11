@@ -37,10 +37,16 @@
       }
       p {
         text-align: center;
+        @include mQ($sm) {
+          font-size: 14px !important;
+        }
       }
       h5 {
         text-align: center;
         margin-top: 10px;
+        @include mQ($sm) {
+          font-size: 15px !important;
+        }
       }
     }
   }

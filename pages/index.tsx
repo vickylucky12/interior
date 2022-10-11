@@ -47,6 +47,6 @@ export async function getStaticProps() {
       services,
       gallery,
     },
-    revalidate: 160000,
+    revalidate: 50000,
   }
 }
