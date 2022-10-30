@@ -4,7 +4,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SANITY_PROJECT_ID: 'vtwv8a9n',
     NEXT_PUBLIC_SANITY_DATASET: 'production',
-    NEXT_PUBLIC_FORMS_ID: 'xqkjqboy',
+    NEXT_PUBLIC_FORMS_ID: 'xnqrgrvk',
   },
   images: {
     domains: [
